@@ -196,20 +196,12 @@ final class GameViewController: UIViewController {
     private func setupCardArea() {
         cardArea.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(cardArea)
-
-        		let ratioConstraint = cardArea.heightAnchor.constraint(equalTo: cardArea.widthAnchor, multiplier: 1.42)
-ratioConstraint.priority = .defaultHigh
-
-let maxHeight = cardArea.heightAnchor.constraint(lessThanOrEqualToConstant: 650)
-
         NSLayoutConstraint.activate([
             cardArea.topAnchor.constraint(equalTo: timeBarTrack.bottomAnchor, constant: 22),
             cardArea.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
             cardArea.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -28),
             cardArea.heightAnchor.constraint(equalTo: cardArea.widthAnchor, multiplier: 1.42),
-
-			ratioConstraint,
-    maxHeight
+			cardArea.heightAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.heightAnchor,multiplier: 0.58)
             
         ])
     }
@@ -220,17 +212,19 @@ let maxHeight = cardArea.heightAnchor.constraint(lessThanOrEqualToConstant: 650)
         buyButton.addTarget(self, action: #selector(buyButtonTapped), for: .touchUpInside)
         sellButton.addTarget(self, action: #selector(sellButtonTapped), for: .touchUpInside)
 
-        NSLayoutConstraint.activate([
-            buyButton.topAnchor.constraint(equalTo: cardArea.bottomAnchor, constant: 22),
-            buyButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
-            buyButton.widthAnchor.constraint(equalTo: sellButton.widthAnchor),
-            buyButton.heightAnchor.constraint(equalToConstant: 66),
+NSLayoutConstraint.activate([
+    buyButton.topAnchor.constraint(greaterThanOrEqualTo: cardArea.bottomAnchor, constant: 22),
+    buyButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+    buyButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
+    buyButton.widthAnchor.constraint(equalTo: sellButton.widthAnchor),
+    buyButton.heightAnchor.constraint(equalToConstant: 66),
 
-            sellButton.topAnchor.constraint(equalTo: buyButton.topAnchor),
-            sellButton.leadingAnchor.constraint(equalTo: buyButton.trailingAnchor, constant: 16),
-            sellButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -28),
-            sellButton.heightAnchor.constraint(equalToConstant: 66)
-        ])
+    sellButton.topAnchor.constraint(equalTo: buyButton.topAnchor),
+    sellButton.leadingAnchor.constraint(equalTo: buyButton.trailingAnchor, constant: 16),
+    sellButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -28),
+    sellButton.heightAnchor.constraint(equalToConstant: 66)
+])
+		
     }
 
     private func configureActionButton(_ button: ThemeGradientButton, label: UILabel, colors: [UIColor]) {
