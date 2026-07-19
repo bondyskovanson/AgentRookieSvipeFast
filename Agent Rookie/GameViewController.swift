@@ -206,7 +206,7 @@ let maxHeight = cardArea.heightAnchor.constraint(lessThanOrEqualToConstant: 650)
             cardArea.topAnchor.constraint(equalTo: timeBarTrack.bottomAnchor, constant: 22),
             cardArea.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 28),
             cardArea.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -28),
-            cardArea.heightAnchor.constraint(equalTo: cardArea.widthAnchor, multiplier: 1.42)
+            cardArea.heightAnchor.constraint(equalTo: cardArea.widthAnchor, multiplier: 1.42),
 
 			ratioConstraint,
     maxHeight
