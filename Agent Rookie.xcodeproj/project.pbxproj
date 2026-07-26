@@ -374,8 +374,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Agent-Rookie-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "AgentRookie SvipeFast";
-				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to the camera to take photos";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app needs access to the photo library to upload images";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
@@ -412,8 +410,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Agent-Rookie-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "AgentRookie SvipeFast";
-				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs access to the camera to take photos";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app needs access to the photo library to upload images";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
